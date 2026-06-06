@@ -9,10 +9,13 @@ double addNumbers(double a, double b) {
 double subtractNumbers(double a, double b) {
     return a - b;
 }
+double divisionNumbers(double a, double b){
+    return a / b;
+}
 
 int main () {
     int choice;
-    cout << "Enter your choice (1 for addition, 2 for subtraction): ";
+    cout << "Enter your choice (1 for addition, 2 for subtraction, 3 for division): ";
     cin >> choice;
 
     switch(choice) {
@@ -30,6 +33,12 @@ int main () {
             cout << "Result: " << subtractNumbers(a, b) << endl;
             break;
         } // <-- Added closing brace
+        case 3: {
+            double a, b;
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "Result: " << divisionNumbers(a, b) << endl;
+        }
         default:
             cout << "Invalid choice!" << endl;
     }
